@@ -1,5 +1,5 @@
 DOCUMENT INFORMATION:
-  This document is for the lubuntu image created with CUBIC imaging utility. It will describe the basic features of the LUBUNTU-IMAGE iso as well as some of it's maintenance and use cases. 
+  This document is for the LUBUNTU image created with the CLONEZILLA imaging utility. It will describe the basic features of the LUBUNTU-IMAGE iso as well as some of it's maintenance and use cases. 
   
 DESCRIPTION:
   This image is to server as a platform for all future images. Lubuntu was selected for it's lightweight install and spacial efficiency. This image will be stored on the openstack server and provisioned as needed to use for client tests and other utility access. 
@@ -10,8 +10,7 @@ STANDARDS:
   
   
 INSTALLED SOFTWARE:
-  Cubic - Custom UBuntu Iso Creator: it is a graphical utility built to quickly and easily modify your own iso images for UBUNTU systems. This will be the quickest and easiest way to create images and expand the functionality of the system. 
-
+  NONE! This is a completely clean installation of LUBUNTU
 VERSION: 
   20.04.2-LTS
 RELEASE: 
