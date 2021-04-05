@@ -1,3 +1,7 @@
+DOCUMENT INFORMATION:
+  This document is for the LOIC image. It will describe the basic features of the LOIC qcow as well as some of it's maintenance and use cases. 
+  
+DESCRIPTION:
 LOW ORBIT ION CANON (LOIC) IS A CONTROLLED DENIAL OF SERVICE APPLICATION. 
 
 THIS IMAGE IS TO BE USED AFTER CONSENT TO THE RULES OF ENGAGEMENT.
@@ -12,6 +16,7 @@ THE SCRIPT THAT ACCEPTS USER INPUT AND CONFIRMS THE ACKNOWLEDGEMENT OF THE TERMS
 bootstrap-tos-bash.bash - SERVES TO START THE TERMINAL INTERACTION TO HOST THE tos-bash.bash SCRIPT
 tos-bash.bash - LAUNCHES THE FIREFOX WEB BROWSER TO THE RULES OF ENGAGEMENT DOCUMENT. ACCEPTS THE CONDITIONS AND LAUNCHES THE LOIC APPLICATION FOR THE USER TO COMMENCE THE SESSION
 
+STANDARDS:
 SCRIPT LOCATIONS:
 /usr/local/bin
 
@@ -27,3 +32,16 @@ INSTALLATION PROCEDURE:
     a. OPEN THE SYSTEM SETTINGS
     b. NAVIGATE TO SESSION SETTINGS
     c. ADD THE bootstrap-tos-bash.bash TO THE STARTUP APPS
+  
+INSTALLED SOFTWARE:
+  Wine32,Wine64
+  LOIC (runtime exe - not installed)
+  tos-bash.bash (bash script - not installed)
+  bootstrap-tos-bash.bash (bash script - not installed)
+VERSION: 
+  20.04.2-LTS
+RELEASE: 
+  1.0
+DATE CREATED:
+  4/1/2021 - April fools!
+ 
