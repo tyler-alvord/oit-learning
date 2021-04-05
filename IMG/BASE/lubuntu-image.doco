@@ -1,5 +1,5 @@
 DOCUMENT INFORMATION:
-  This document is for the LUBUNTU image created with the CLONEZILLA imaging utility. It will describe the basic features of the LUBUNTU-IMAGE iso as well as some of it's maintenance and use cases. 
+  This document is for the LUBUNTU image created with the QEMU. It will describe the basic features of the LUBUNTU-IMAGE iso as well as some of it's maintenance and use cases. 
   
 DESCRIPTION:
   This image is to server as a platform for all future images. Lubuntu was selected for it's lightweight install and spacial efficiency. This image will be stored on the openstack server and provisioned as needed to use for client tests and other utility access. 
@@ -17,6 +17,3 @@ RELEASE:
   1.0
 DATE CREATED:
   3/14/2021 - happy pi day!
-  
- RELATED RESOURCES:
- See https://github.com/tyler-alvord/oit-learning/blob/main/clonezilla.doco for more information on the CLONEZILLA Utility.
