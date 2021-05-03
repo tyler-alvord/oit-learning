@@ -51,15 +51,14 @@ STANDARDS:
   
 INSTALLATION PROCEDURE:
   1. START WITH THE CLEAN INSTALL OF LUBUNTU
-  2. RUN THE SCRIPT FOUND IN THIS REPOSITORY
+  2. RUN THE SCRIPT FOUND IN THIS REPOSITORY (MAKE SURE THE SCRIPT IS IN THE SAME DIRECTORY AS THE SAMBA BACKUPS FOLDER)
+  3. RUN "CHGRP -R" FOR EACH OF THE FILES IN THE DEPTS folder
+  4. RUN "CHGRP" FOR EACH FOLDER - ASSIGNING IT TO THE RELEVANT STAFF group
+  5. CONFIRM PERMISSIONS ARE APPROPRIATELY APPLIED TO SAMBA AND CUPS FILES
 
-INSTALLED SOFTWARE:
-  [*** Add the names of installed packages here. This should be the name that can be used in the apt-get install command to make it easy ***]
 VERSION: 
-  [*** This will likely not change unless the vanilla install image has been changed ***]
   20.04.2-LTS
 RELEASE: 
-  [*** Only change this if updating an existing configuration ***]
-  1.0 
+  1.0
 DATE CREATED:
-  [*** MM ***]/[*** DD ***]/[*** 20XX ***]
+  4/28/2021
