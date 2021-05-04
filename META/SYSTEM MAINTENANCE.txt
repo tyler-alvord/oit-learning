@@ -1,0 +1,8 @@
+SYSTEM MAINTENANCE
+=====================
+This document is used to describe the configurations that will need to be maintained by future administrators. Any scheduled maintenance tasks can be noted here. Additional parts that need attention from administrators can be noted here. 
+
+GENERAL SYSTEM UPDATES SHOULD SUFFICE FOR THIS SYSTEM AS CONFIGURED. 
+
+Administrative updates may need to be made to maintain the user base and ensure that relevant administrators are granted the necessary access.
+

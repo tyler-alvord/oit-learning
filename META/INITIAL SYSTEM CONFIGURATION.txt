@@ -1,0 +1,17 @@
+INITIAL SYSTEM CONFIGURATION
+=================================
+KERNEL: 
+VERSION: 
+
+USERNAME: oit
+PASSWORD: 0wl@dm!n
+
+ADDITIONAL CONFIGURATIONS:
+This system is installed on two systems. The first is a controller node. It is currently a virtual machine in hyper v provisioned with 8GB and 4 CPU cores. The controller node is the host for the main components for the sytsem, including Keystone, Glance, Neutron, and Cinder
+The second computer is configured on a physical system with 16GB DDR4, 256GB SSD, Intel Core i7-6700k. This is a compute node that will be used to host the virtual machines and will be managed by the controlling node. 
+
+The IP Address of each server is configured statically in accordance with the environment that they are plugged into. A reservation will be made when it is installed in the final environment.
+
+The compute node is configured using the ssh key that has been added to the Github that contains this file. "node01-SSH"
+
+The primary controller server is not attached to an SSH key due to the ease of remote access through the Hyper V remote desktop implementation. 

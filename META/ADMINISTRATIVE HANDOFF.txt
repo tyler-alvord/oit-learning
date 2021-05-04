@@ -1,0 +1,6 @@
+ADMINISTRATIVE HANDOFF
+=========================
+
+Student administrators are members of the student body that will be participating in the administration of the main systems involved in the learning environment - the controller and the compute node. As students, it's likely that there will need to be handoffs either during busy seasons/times, or after student administrators graduate. 
+
+Ample student administrators should be kept so that the system can be generally maintained by students without excessive staff involvement
