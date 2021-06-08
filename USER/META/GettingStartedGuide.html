@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Getting Started Guide </title> <!-- change this to your title of choice-->
+<!-- Best if you leave the style section alone. -->
+<style> 
+    header {
+        background-color: lightgray;
+        text-align: center;
+        font-size: 20px;
+        color: black;
+    }
+    iframe {
+        height:500px;
+        float: left;
+        width: 15%;
+        padding-left:2.5%;
+        padding-right:2.5%;
+        overflow:hidden;
+    }
+    article{
+        float: right;
+        width: 70%;
+        padding-right:5%;
+    }
+    table{
+        text-align: center;
+        padding: 5px;
+    }
+    th{
+        background-color: lightgrey
+    }
+    td{
+        border: 1px solid lightgray;
+        text-align:left;
+        max-width: 400px;
+    }
+</style>
+</head>
+<header>
+<h1>User Getting Started Guid</h1>
+</header>
+<iframe src="../../TMPL/linklist.html" title="Nav Links"></iframe>
+<article> 
+    <h2>What is Openstack?</h2>
+    <p>Openstack is a cloud platform - it orchestrates a series of services in order to provide a unified method of turning bare metal assets into a cohesive cloud.</p>
+    <p>This system is not a fully implemented openstack environment- rather, it is an install of the Canonical Microstack environment - which is prepacked with the components below.</p>
+    <h3>Openstack services</h3>
+    <ul>
+        <li>Nova: The compute service/Hypervisor within openstack. This is responsible for orechestrating virtual machines</li>
+        <li>Glance: The Imaging services withing openstack. This provides managing resources for computer images</li>
+        <li>Keystone: The authentication services</li>
+        <li>Neutron: The Network manager for openstack, creates and manages virtual networks for the machines within the Openstack environment.</li>
+        <li>Horizon: The web interface for the openstack environment. Can manage all component apps (virtual instances, networks, and images)</li>
+    </ul>
+    <p>Full openstack installations can contain many additional services, <a href="https://www.openstack.org/software/project-navigator/openstack-components#openstack-services">which can be found on the official Openstack website here</a></p>
+    <h2>For first time access</h2>
+    <p>Consult with a student or staff administrator (see the "contacts" page in the base directory for more information) to get your openstack account setup.</p>
+    <h2>How to access Openstack</h2>
+    <ol>
+        <li>Head over to <a style="font-family:'lucida-console', monospace">https://localhost:10000</a> (if logged into the main server) or <a style="font-family:'lucida-console', monospace">https://oscontrol:10000</a> if on a remote machine.</li>
+        <li>Login using the credentials that you've created with the student or staff administrator</li>
+        <li>You're in!</li>
+    </ol>
+    <h2>Creating instances</h2>
+</article>
+</html>
