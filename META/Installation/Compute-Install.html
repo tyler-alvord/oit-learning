@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Compute Install - Admin Info </title> <!-- change this to your title of choice-->
+<!-- Best if you leave the style section alone. -->
+<style> 
+header {
+    background-color: lightgray;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+iframe {
+    height:500px;
+    float: left;
+    width: 15%;
+    padding-left:2.5%;
+    padding-right:2.5%;
+    overflow:hidden;
+}
+article{
+    float: right;
+    width: 70%;
+    padding-right:5%;
+}
+</style>
+</head>
+<header>
+<h1>Admin Info: Compute Node Installation</h1>
+</header>
+<iframe src="D:git\oit-learning\TMPL\linklist.html" title="Nav Links"></iframe>
+<article>
+    <p>This is the process to configure compute nodes. The same steps can be used for subsequent compute nodes to be added to the environment</p>
+    <ol>
+        <li>Install Ubuntu Server 20 LTS on second machine</li>
+        <ol>
+            <li>Add SSH to the server</li>
+            <li>Install in default hard drive configuration</li>
+            <li>Statically assign the address to the NIC</li>
+            <ol>
+                <li>Add search domains</li>
+                <ul>
+                    <li style="font-family:'Lucida Console', monospace">domain.local</li>
+                    <li style="font-family:'Lucida Console', monospace">lab.connection.ninja</li>
+                    <li style="list-style:none;">This sub domain may need to change if the lab environment already has a domain assined that doesn't match.</li>
+                </ul>
+                <li>Add host name</li>
+                <ul>
+                    <li style="font-family:'Lucida Console', monospace">osnode-01</li>
+                    <li style="list-style: none">(or equivalent to the number of compute nodes you're installing - for example, the second compute node would be named osnode-02)</li>
+                </ul>
+            </ol>
+            <li>Add the SSH key from the oit-learning Github</li>
+            <li>Create the OIT administrator account</li>
+            <ol>
+                <li>NAME: <a style="font-family:'Lucida Console', monospace">OIT Administrator</a></li>
+                <li>USERNAME: <a style="font-family:'Lucida Console', monospace">oit</a></li>
+                <li>PASSWORD: <a style="font-family:'Lucida Console', monospace">0!tgr@d21</a></li>
+            </ol>
+        </ol>
+        <li>Extend the file system to fill the drive with the following commands:</li>
+        <ol>
+            <li style="font-family:'Lucida Console', monospace">sudo lvm lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv</li>
+            <li style="font-family:'Lucida Console', monospace">sudo resize2fs /dev/ubuntu-vg/ubuntu-lv</li>
+        </ol>
+        <li>Add the LDAP server as an authentication source through SSSD</li>
+        <ol>
+            <li>Install the requisite components</li>
+            <ul>
+                <li style="list-style: none; font-family:'Lucida Console', monospace">sudo apt-get install sssd-ldap, ldap-utils</li>
+            </ul>
+            <li>Create or import the <a style="font-family:'Lucida Console', monospace">/etc/sssd/sssd.conf</a> file (the sssd.conf file in this directory is a copy that should work as long as it's copied to /etc/sssd and the permissions are changed). Set permissions <a style="font-family:'Lucida Console', monospace">0600</a> and ownership <a style="font-family:'Lucida Console', monospace">root:root</a></li>
+            <ul>
+                <li style="list-style: none; font-family:'Lucida Console', monospace">sudo cp ~/Downloads/sssd.conf /etc/sssd/sssd.conf</li>
+                <li style="list-style: none; font-family:'Lucida Console', monospace">sudo chmod 0600 /etc/sssd/sssd.conf</li>
+                <li style="list-style: none; font-family:'Lucida Console', monospace">sudo chown root:root /etc/sssd/sssd.conf</li>
+            </ul>
+            <li>Start the SSSD service (System Security Services Daemon)</li>
+            <ul>
+                <li style="list-style: none; font-family:'Lucida Console', monospace">sudo systemctl restart sssd</li>
+            </ul>
+            <li>Enable home directory creation</li>
+            <ul>
+                <li style="list-style: none; font-family:'Lucida Console', monospace">sudo pam-auth-update --enable mkhomedir</li>
+            </ul>
+            <li>Validate the certificate is working for LDAPS</li>
+            <ul>
+                <li style="list-style: none; font-family:'Lucida Console', monospace">sudo ldapwhoami -x -ZZ -h oscontrol.lab.connection.ninja</li>
+                <li style="list-style: none;">You should receieve the result <a style="font-family:'Lucida Console', monospace">anonymous</a> if it is working correctly. If this fails, check to make sure that you have imported the SSL certificate properly on the server and that nothing on the network is blocking a successful connection</li>
+            </ul>
+            <li style="list-style: none;">These steps were pulled from the Ubuntu documentation  <a href="https://ubuntu.com/server/docs/service-sssd">here</a></li>
+            <li>Complete the SUDO setup</li>
+            <ul>
+                <li>Add the value <a style="font-family:'Lucida Console', monospace; background-color:lightgray">sss</a> to the <a style="font-family:'Lucida Console', monospace; background-color:lightgray">sudoers</a> value in the  <a style="font-family:'Lucida Console', monospace; background-color:lightgray">nsswitch.conf</a>.</li>
+                <li> <a style="font-family:'Lucida Console', monospace; background-color:lightgray">sss</a> should also be present on the <a style="font-family:'Lucida Console', monospace; background-color:lightgray">passwd</a>, <a style="font-family:'Lucida Console', monospace; background-color:lightgray">group</a>, <a style="font-family:'Lucida Console', monospace; background-color:lightgray">shadow</a>, <a style="font-family:'Lucida Console', monospace; background-color:lightgray">services</a>, <a style="font-family:'Lucida Console', monospace; background-color:lightgray">netgroup</a>, and <a style="font-family:'Lucida Console', monospace; background-color:lightgray">automount</a> values. If they aren't present on those lines, add the value to the end of the existing configuration, separated by a space (for example:  <a style="font-family:'Lucida Console', monospace">sudoers: &Tab; files sss</a>)</li>
+                <li style="list-style: none;">The sudo configuration process is partially documented <a href="https://manpages.ubuntu.com/manpages/focal/man5/sssd-sudo.5.html">here</a> </li>
+            </ul>
+        </ol>
+        <li>Aftere completion run the following commands to install OpenStack Microstack *</li>
+        <ol>
+            <li style="font-family:'Lucida COnsole', monospace">sudo su -</li>
+            <li style="font-family:'Lucida COnsole', monospace">snap install microstack --devmode --beta</li>
+        </ol>
+        <li>Add the following repository to APT:</li>
+        <ul><li style="font-family:'Lucida COnsole', monospace">deb https://webmin.com/download/repository sarge contrib</li></ul>
+        <li>After completion run the following commands:</li>
+        <ol>
+            <li style="font-family:'Lucida COnsole', monospace">sudo wget https://download.webmin.com/jcameron-key.asc</li>
+            <li style="font-family:'Lucida COnsole', monospace">sudo apt-get install apt-transport-https</li>
+            <li style="font-family:'Lucida COnsole', monospace">sudo apt-get update</li>
+            <li style="font-family:'Lucida COnsole', monospace">sudo apt-get install webmin</li>
+            <li style="list-style: none;">These steps were pulled from the official Webmin steps for Debian install <a href="https://www.webmin.com/deb.html">here</a></li>
+        </ol>
+    </ol>
+    <p style="background-color: rgb(255, 255, 163);">* It is important that you run the Openstack/Micorstack installation as the root user on the server. This will prevent some conflicts in the web interfaces of Openstack Horizon and Webmin.</p>
+</article>
+</html>

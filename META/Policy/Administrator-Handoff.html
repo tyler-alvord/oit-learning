@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Administrative Standards and Expectations</title> <!-- change this to your title of choice-->
+<!-- Best if you leave the style section alone. -->
+<style> 
+header {
+    background-color: lightgray;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+iframe {
+    height:500px;
+    float: left;
+    width: 15%;
+    padding-left:2.5%;
+    padding-right:2.5%;
+    overflow:hidden;
+}
+article{
+    float: right;
+    width: 70%;
+    padding-right:5%;
+}
+</style>
+</head>
+<header>
+<h1>Admin Standards and Expectations Standards</h1>
+</header>
+<iframe src="D:git\oit-learning\TMPL\linklist.html" title="Nav Links"></iframe>
+<article> 
+    <h2>Student Administrators</h2>
+    <p>Student administrators are members of the student body that will be participating in the administration of the main systems involved in the learning environment - the controller and the compute node, and the images contained within the system.</p>
+    <h3>General Administrative Tasks</h3>
+    <li>Image maintenance</li>
+    <li>Documentation maintenance</li>
+    <li>New Administrator Enablement</li>
+    <p>As students, it's likely that there will need to be handoffs either during busy seasons/times, or after student administrators graduate. Student administrators that know they will be unavailable for the administrative tasks of this system should notify the staff administrator of their absense with enought time to make the necessary adjustments - either selecting a new student administrator, or to notify the staff admin that they will need to keep an eye on the system for a duration.</p>
+    <p>Ample student administrators should be kept so that the system can be generally maintained by students without excessive staff involvement. For the initial run of this system, a single student will probably suffice, but this may need to scale up as the system grows or as the administrative tasks become better understood.</p>
+    
+    <h2>Staff Administrators</h2>
+    <h3>Administrative Structure</h3>
+    <p>Initially, there will only need to be one staff administrator at a time - to smooth out any future transitions, at least two staff members should be briefed on the functionality and maintenance of the system, as well as the process for selecting and training new administrators. The secondary staff admin doesn't need to fully understand the system, nor do they need to actually work on the system. They simply need to be briefed in order to help student administrators if something unforeseen affects the primary staff admin's ability to help with the system.</p>
+    <h3>Administrative Expectations</h3>
+    <p>Staff administrators (primary or secondary) should be the point of contact for other staff members, and should be able to provide insight into the available staff members that could fill the necessary roles. In the event that a staff member is leaving or otherwise becomming unable to fill the role of administrator, the other staff member should notify the student administrator(s) of the changes, and if possible, begin to facilitate the replacement staff administrator.</p>
+    <p>Staff administrators' primary function is to facilitate student stewardship. Hands-on administration is an infrequent requirement for staff, but may be expected in times when student administrators are unavailable.</p>
+    <h3>Administrative Handoff</h3>
+    <ol>
+        <li>In the event that a new student or staff administrator needs to be selected, the staff administrators should be the resource that provides a candidate list. This selection can occur unilaterally if the staff member has the time and inclination, or the list can be provided to the student administrators for final selection and onboarding.</li>
+        <li>After administrative selection occurs, the student administrator can be the point of contact for providing the necessary resources to the new admin. This includes briefing on system functions, role expectations, and other involved parties.</li>
+        <ul>
+            <li>Inform of and provide access to documentation (github)</li>
+            <li>Debrief on system functionality (images, components, etc)</li>
+        </ul>
+        <li>Student administrator are responsible for creating the account for the new administrator. A default password can be used if absolutely necessary on the condition that the new administrator changes the account password as soon as possible. Otherwise, the student administrator should create the account with the required permissions and allow the new administrator to set the password on their own. </li>
+        <ul>
+            <li>Create an account for the administrator in the LDAP server</li>
+            <li>Create an account for the administrator in the OpenStack environment</li>
+            <li>Set permissions for the new user (add to sudoers, provide file permissions)</li>
+        </ul>
+        <li>If admin is leaving the organization, deprovision the previous administrator</li>
+        <ul>
+            <li>Reset the password for LDAP</li>
+            <li>Reset the password for OpenStack</li>
+            <li>Delete/Deactivate account for LDAP</li>
+            <li>Delete/Deactivate account for OpenStack</li>
+        </ul>
+        <li>New adminstrator's tasks can be added to the "Contacts" table in this directory</li>
+    </ol>
+</article>
+</html>

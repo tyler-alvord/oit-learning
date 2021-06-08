@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Initial Config Summary </title> <!-- change this to your title of choice-->
+<!-- Best if you leave the style section alone. -->
+<style> 
+header {
+    background-color: lightgray;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+iframe {
+    height:500px;
+    float: left;
+    width: 15%;
+    padding-left:2.5%;
+    padding-right:2.5%;
+    overflow:hidden;
+}
+article{
+    float: right;
+    width: 70%;
+    padding-right:5%;
+}
+</style>
+</head>
+<header>
+<h1>System Configuration Summary</h1>
+</header>
+<iframe src="D:git\oit-learning\TMPL\linklist.html" title="Nav Links"></iframe>
+<article> 
+    <h2>FLAVOR</h2>
+    <p>UBUNTU</p>
+    <h2>VERSION</h2>
+    20.04.2 LTS (Focal Fossa)
+    <h2>OS Login</h2>
+    <h3>Username</h3>
+    <p>oit</p>
+    <h3>Password</h3>
+    <p>0wl@dm!n</p>
+    <h2>Additional Configuration</h2>
+    <p>This system is installed on two systems. the first is a controller node. It is currently a virtual machine in Hyper V provisioned with 8GB RAM and 4CPU cores. The controller node is the host for the main components for the system, including Keyston, Glance, Neutron, and Cinder.</p>
+    <p>The second computer is configured on a Bare Metal system with 16GB RAM, 256GB SSD, and Intel Core i7-6700k. This is a compute node that will be used to host most of the virtual machines and will be managed by the control node.</p>
+    <p>The IP Address of each server is configured statically in accordance with the environemtn that they are plugged into. A reservation will be made when it is interest in the final environment</p>
+    <p>Both the controller and compute nodes will use the same SSH from the Github repository. The SSH key is called "node01-SSH"</p> 
+    <p>The primary controller server is not attached to an SSH key due to the ease of remote access through the Hyper V remote desktop implementation.</p>
+</article>
+</html>

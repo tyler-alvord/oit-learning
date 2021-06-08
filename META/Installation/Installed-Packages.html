@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Installed Packages </title> <!-- change this to your title of choice-->
+<!-- Best if you leave the style section alone. -->
+<style> 
+header {
+    background-color: lightgray;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+iframe {
+    height:500px;
+    float: left;
+    width: 15%;
+    padding-left:2.5%;
+    padding-right:2.5%;
+    overflow:hidden;
+}
+article{
+    float: right;
+    width: 70%;
+    padding-right:5%;
+}
+table{
+    text-align: center;
+    padding: 5px;
+}
+th{
+    background-color: lightgrey
+}
+td{
+    border: 1px solid lightgray;
+    text-align:left;
+    max-width: 400px;
+}
+</style>
+</head>
+<header>
+<h1>Installed Packages</h1>
+</header>
+<iframe src="D:git\oit-learning\TMPL\linklist.html" title="Nav Links"></iframe>
+<article> 
+    <p style="background-color:lightpink">NOTE: This document is manually updated. Any new packages installed on the host system should be noted here.</p>
+    <p>The controller system has the GUI (Ubuntu Server Minimal Install) installed for Ubuntu server. The Compute node is not configured with a graphic interface.</p>
+    <table>
+        <!--
+        <tr>
+            <td>Package Name</td>
+                name of the package - ex: Firefox
+            <td>Location ("Node Name" or "All")</td>
+                What server(s) is this package installed on?
+            <td>Function</td>
+                What is the function or use of this app or package? What does it do?
+            <td>Configurations</td>
+                What configurations did you need to do add to get this up and running?
+            <td>Notes</td>
+                Add any useful notes- storage locations, credentials, caveats, or ideas that you'd like to be known about this package.
+        </tr>
+        -->
+        <tr>
+            <th>Package Name</th>
+            <th>Location ("Node Name" or "All")</th>
+            <th>Function</th>
+            <th>Configurations</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>Microstack</td>
+            <td>ALL</td>
+            <td>This function system is the foundation of all the functions of the test environment system. Microstack includes the user authentication infrastructure, container management, management web portal, storage management, and imaging services. The internal components of this configuration will be noted in the notes section of this entry.</td>
+            <td>
+                <li>Bridge adapter (10.20.20.0/24) added to host system</li>
+                <li>Internal network renamed</li>
+                <li>External Network renamed</li>
+                <li>Virtual router renamed</li>
+                <li>Added custom security groups - changed default to be restrictive, added a group for unrestricted flow</li>
+                <li>Custom system size added for general use, removed additional options (too many resources available)</li>
+                <li>Users added for generic student administrator and generic staff administrator (specific accounts should probably be added later.</li>
+            </td>
+            <td>
+                <li>NOVA: This is the compute services that are included with openstack. This service is used to run the environments that are built out for student testing.</li> 
+                <li>CINDER: This is the block storage system that can be used to create and manage storage for the images to connect to as their local hard drive</li>
+                <li>GLANCE: Glance is the service that's used to image devices. This provides an API to load and unload images from the system.</li> 
+                <li>NEUTRON: Provides local networking within the virtual environments on the system. </li>
+                <li>KEYSTONE: The identity platform that provides access control for the web interface and all the other components within the Microstack environment.</li> 
+                <li>HORIZON: The web interface for managing the systems. </li>
+            </td>
+        </tr>
+        <tr>
+            <td>microk8s</td>
+            <td>oscontrol</td>
+            <td>Provides a simple, non-openstack version of kubernetes for the server to host applications that operates separately from the openstack environment (despite openstack having valid kubernetes support, MiniKube is installed separately because microstack doesn't expand with standard openstack packages)</td>
+            <td>This is largely for future configurations that require container management use in the learning environment. It will be in the default configuration</td>
+            <td>microk8s includes a local single-node installation of Kubernetes (K8s) and the kubectl command line utility for creating and managing containers within the system.</td>
+        </tr>
+        <tr>
+            <td>SSH Server</td>
+            <td>ALL</td>
+            <td>Allows connection via SSH to and from this server.</td>
+            <td>Github SSH key imported, "password authentication with certificate connection"</td>
+            <td>N/A</td>
+        </tr> 
+        <tr>
+            <td>tasksel</td>
+            <td>oscontrol</td>
+            <td>A task coordinator that installs and configures related packages to streamline administration. This is used to install and configure the GUI for the control server</td>
+            <td>Ubuntu Desktop Minimal Install selected</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>Apt-transport-https</td>
+            <td>ALL</td>
+            <td>Allows for HTTPS links to be added as APT repositories</td>
+            <td>DEFUALT</td>
+            <td>N/A</td>
+        </tr>            
+        <tr>
+            <td>Webmin</td>
+            <td>ALL</td>
+            <td>Web-Based administration GUI for remotely managing systems through a single pane of glass.</td>
+            <td>
+                <li>Created OIT-LEARNING server group</li>
+                <li>Added compute and control nodes to the OIT-LEARNING group</li>
+                <li>Configured Webmin Clustering. Used login with username and password option to start the cluster.</li>
+            </td>
+            <td>All servers are added to a cluster. All servers belong to the group. All future servers should also be added to this group for consistency.</td>
+        </tr>
+        <tr>
+            <td>Certbot</td>
+            <td>oscontrol</td>
+            <td>This package provides a semi-automated service to interact with Letsecnrypt Certificate Authorities to generate CA-Signed SSL/TLS certificates</td>
+            <td>certonly --standalone --preferred-challenges dns</td>
+            <td>This was downloaded and used to create an SSL certificate primarily for the LDAP server, however it can also be used to secure the connection to the Horizon and Webmin interfaces</td>
+        </tr>
+        <tr>
+            <td>slapd</td>
+            <td>oscontrol</td>
+            <td>Provides usermanagement and authentication for both the servers in the environment</td>
+            <td>configured to lab.connection.ninja, added user oit, using the populate.ldif. Added the sudo schema imported the standard sudoers content into the system through the sudoers.ldif. Configured LDAPS support using the certs.ldif file.</td>
+            <td>Client is setup to authenticate against this. Users can be added to the sudoers group for all machines through this ldap configuration. Just add them as a "sudoUser" attribute on the cn=sudo section of the ldap server's SUDOers organizational unit.</td>
+        </tr>
+        <tr>
+            <td>ldap-utils</td>
+            <td>ALL</td>
+            <td>Provides the utilities necessary to manage the installed LDAP server on OSControl</td>
+            <td>DEFAULT</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>schema2ldif</td>
+            <td>oscontrol</td>
+            <td>Provides a configuration utility to manage the schema for the ldap server</td>
+            <td>DEFAULT</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>sssd-ldap</td>
+            <td>ALL</td>
+            <td>The system security services daemon that facilitates authentcation and user management. It can be configured to interact with many systems (including FreeIPA, Kerberos, and several combinations from there. This particular installation includes the necessary components for an LDAP configuration</td>
+            <td>Setup to point to oscontrol.lab.connection.ninja</td>
+            <td>SSSD is also used to facilitate SUDO access through the LDAP system.</td>
+        </tr>
+    </table>
+</article>
+</html>

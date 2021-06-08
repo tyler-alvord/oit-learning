@@ -1,0 +1,31 @@
+dn: ou=Users,dc=lab,dc=oit,dc=edu
+objectClass: organizationalUnit
+ou: Users
+
+dn: ou=Groups,dc=lab,dc=oit,dc=edu
+objectClass: organizationalUnit
+ou: Groups
+
+dn: cn=StudentAdmins,ou=Groups,dc=lab,dc=oit,dc=edu
+objectClass: posixGroup
+cn: StudentAdmins
+gidNumber: 5000
+
+dn: cn=StaffAdmins,ou=Groups,dc=lab,dc=oit,dc=edu
+objectClass: posixGroup
+cn: StaffAdmins
+gidNumber: 5000
+
+dn: uid=oit,ou=Users,dc=lab,dc=oit,dc=edu
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: oit
+sn: administrator
+displayName: OIT Administrator
+uidNumber: 9999
+gidNumber: 5000
+userPassword: 0wl@dm!n
+gecos: OIT Administrator
+loginShell: /bin/bash
+homeDirectory: /home/oit

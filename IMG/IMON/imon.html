@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Infection Monkey - Admin Info </title> <!-- change this to your title of choice-->
+<!-- Best if you leave the style section alone. -->
+<style> 
+header {
+    background-color: lightgray;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+iframe {
+    height:500px;
+    float: left;
+    width: 15%;
+    padding-left:2.5%;
+    padding-right:2.5%;
+    overflow:hidden;
+}
+article{
+    float: right;
+    width: 70%;
+    padding-right:5%;
+}
+</style>
+</head>
+<header>
+<h1>Admin Info: Infection Monkey Image</h1>
+</header>
+<iframe src="D:git\oit-learning\TMPL\linklist.html" title="Nav Links"></iframe>
+<article> 
+    <h2>DOCUMENT INFORMATION:</h2>
+    <p> This document is for the Infection Monkey (imon) image. It will describe the basic features of Infection Monkey, as well as some of the image's maintenance and use cases. </p>
+    <!--Briefly describe what this document is - NOT what the system or configuration is. -->
+    <!--Ex: "This is a document describing the configuration and maintenance of the IMAGE qcow file."-->
+    <h2>DESCRIPTION:</h2>
+    <p>Infection Monkey is a vulnerability scanner and network attack simulator. It uses one machine (in this case, this image - also known within the software as "monkey island") to propogate access to the network through exploits and attack methods.</p>
+    <p>This image should be used after consent to the rules of engagement - using this image for unintended purposes is dangerous, traceable, and in violation of not only the terms of use for this system, but also the terms of service for the application.</p>
+    <p>Infection Monkey's native documentation can be accessed in the link here:</p>
+    <a href="https://www.guardicore.com/infectionmonkey/docs/">LINK TO GUARDICORE INFECTION MONKEY DOC CENTER</a>
+    <!--Go into the deetail of what the system does and how-->
+    <h2>STANDARDS:</h2>
+    <h3>OS LOGIN</h3>
+    <p>USER: oit</p>
+    <p>PASSWORD: 0wl@dm!n</p>
+
+    <h3>INFECTION MONKEY LOGIN</h3>
+    <p>USER: admin</p>
+    <p>PASSWORD: 0wl@dm!n</p>
+
+    <h3>Accessing Infection Monkey</h3>
+    <p>Infection monkey will be located at https://localhost:5000/</p>
+    <!--Include the assumptions that were made to configure the system. Things like script locations, usernames, passwords (if necessary), and other added components should be noted here.-->
+    <h2>INSTALLATION PROCEDURE:</h2>
+    <ol>
+        <li>Create a guardicore account at https://www.guardicore.com/infectionmonkey/</li>
+        <li>Download the debian installer from the email that they will send you on the lubuntu machine (base image)</li>
+        <li>Follow the Infection Monkey install guide</li>
+        <ul><a href="https://www.guardicore.com/infectionmonkey/docs/setup/debian/"></a></ul>
+        <li>Set the admin account to the OIT admin credentials</li>
+        <li>Head to the Infection Monkey Admin interface and verify that the image is up and running.</li>
+    </ol>
+    <!--Provide the necessary steps to replicate the environment in the event of dataloss or system failure. Be sure to include apps that need installation, configuration changes, and relevant resources like backups or config files that can be used to ease the process for future admins-->
+    <h2>INSTALLED SOFTWARE:</h2>
+    <li>Guardicore Infection Monkey (free) and associated dependencies (should install automatically)</li>
+    <!-- Add the names of installed packages here. This should be the name that can be used in the apt-get install command to make it easy-->
+    <h2>VERSION</h2>
+    <!--This will likely not change unless the vanilla install image has been changed-->
+    <p>20.04.2-LTS</p>
+    <h2>RELEASE</h2>
+    <!--Only change this if updating an existing configuration-->
+    <p>1.0</p>
+    <h2>DATE CREATED:</h2>
+    <p>05/02/2021</p>
+    <!--The date that you commit the change to the image and documentation-->
+    <!--Use the format MM/DD/YYYY for this field.-->
+</article>
+</html>
