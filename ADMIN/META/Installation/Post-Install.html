@@ -45,6 +45,21 @@ td{
     <p>This document provides the steps that should be taken after the initial setup of the system.</p>
     <h2>On the CONTROL Node</h2> 
     <ol>
+        <li>Add the SSL certificate that we generated to webmin</li>
+        <ol>
+            <li>Head to https://oscontrol.lab.connection.ninja</li>
+            <li>Login using the oitroot credentials</li>
+            <li>Select the "webmin" drop down in the admin interface</li>
+            <li>Select the "Webmin configuration" option in the resulting menu</li>
+            <li>Select the "SSL Encryption" option from the menu page</li>
+            <li>Select the <a style="font-family: 'Lucida Console', monospace">/etc/letsencrypt/live/oscontrol.lab.connection.ninja/privkey.pem</a> for the private key</li>
+            <li>Select the "Other file" option for the certificate and then select <a style="font-family: 'Lucida Console', monospace">/etc/letsencrypt/live/oscontrol.lab.connection.ninja/cert.pem</a></li>
+            <li><a style="font-family: 'Lucida Console', monospace">Add /etc/letsencrypt/live/oscontrol.lab.connection.ninja/fullchaim.pem</a> to the "Additional Certificate Files section" </li>
+            <li>Select "YES" for <a style="font-family: 'Lucida Console', monospace">Redirect non-ssl requests to SSL?</a></li>
+            <li>select "Save"</li>
+            <li>Re-login if necessary</li>
+            <li>Repeat this process for the compute node</li>
+        </ol>
         <li>Add the compute node to the webmin interface of the controller node</li>
         <ol>
             <li>Log into the webmin interface at <a style="font-family: 'Lucida Console', monospace">https://[server-address]:10000</a></li>
@@ -55,7 +70,7 @@ td{
             <ol>
                 <li>Enter the hostname for the compute server</li>
                 <li>SSL Server? <a style="font-family:'Lucida Console', monospace">YES</a></li>
-                <li>Ensure that "Check remote SSL certificate" is <i>unchecked</i></li>
+                <li>Ensure that "Check remote SSL certificate" is <i>checked</i></li>
             </ol>
             <li>Add the new server to the OIT_LEARNING group</li>
             <ul><li>If OIT-LEARNING doesn't exist, use the "create group" option</li></ul>
@@ -76,7 +91,7 @@ td{
         <li>Copy or export the registration code that is generated as a result from the above command</li>
         <li>SSH into the compute node</li>
         <li>Run the following command:</li>
-        <ul><li style="font-family:'Lucida Console', monospace">sudo microstack init --auto --compute --join [registration code, remove the square brackets*]</li></ul>
+        <ul><li style="font-family:'Lucida Console', monospace">sudo microstack init --auto --compute --join [registration code, remove the square brackets <a style="color:red">*</a>]</li></ul>
         <li>Log into Openstack Horizon and configure the system:</li>
         <ol>
             <li>Run the following command to get the admin password:</li>
@@ -93,7 +108,7 @@ td{
             <li>Select <a style="font-family:'Lucida Console', monospace; background-color:lightgray">Project</a> > <a style="font-family:'Lucida Console', monospace; background-color:lightgray">Network</a> > <a style="font-family:'Lucida Console', monospace; background-color:lightgray">Security Groups</a> from the navigation menu on the left</li>
             <ol>
                 <li>Delete all rules for the default group</li>
-                <li>Create a new security group <a style="font-family:'Lucida Console', monospace; background-color:lightgray">Network Accessible</a>**</li>
+                <li>Create a new security group <a style="font-family:'Lucida Console', monospace; background-color:lightgray">Network Accessible</a><a style="color:red">**</a></li>
                 <table>
                     <tr>
                         <th>Traffic Flow</th>

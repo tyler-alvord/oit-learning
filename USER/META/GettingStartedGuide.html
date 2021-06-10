@@ -38,9 +38,9 @@
 </style>
 </head>
 <header>
-<h1>User Getting Started Guid</h1>
+<h1>User Getting Started Guide</h1>
 </header>
-<iframe src="../../TMPL/linklist.html" title="Nav Links"></iframe>
+<iframe src="../../ADMIN/TMPL/linklist.html" title="Nav Links"></iframe>
 <article> 
     <h2>What is Openstack?</h2>
     <p>Openstack is a cloud platform - it orchestrates a series of services in order to provide a unified method of turning bare metal assets into a cohesive cloud.</p>
@@ -49,6 +49,7 @@
     <ul>
         <li>Nova: The compute service/Hypervisor within openstack. This is responsible for orechestrating virtual machines</li>
         <li>Glance: The Imaging services withing openstack. This provides managing resources for computer images</li>
+        <li>Cinder: The block storage system for openstack. This creates and manages the persistent storage for the instances</li>
         <li>Keystone: The authentication services</li>
         <li>Neutron: The Network manager for openstack, creates and manages virtual networks for the machines within the Openstack environment.</li>
         <li>Horizon: The web interface for the openstack environment. Can manage all component apps (virtual instances, networks, and images)</li>
@@ -58,10 +59,36 @@
     <p>Consult with a student or staff administrator (see the "contacts" page in the base directory for more information) to get your openstack account setup.</p>
     <h2>How to access Openstack</h2>
     <ol>
-        <li>Head over to <a style="font-family:'lucida-console', monospace">https://localhost:10000</a> (if logged into the main server) or <a style="font-family:'lucida-console', monospace">https://oscontrol:10000</a> if on a remote machine.</li>
+        <li>Head over to <a style="font-family:'lucida-console', monospace">http://localhost/</a> (if logged into the main server) or <a style="font-family:'lucida-console', monospace">https://oscontrol/</a> if on a remote machine.</li>
         <li>Login using the credentials that you've created with the student or staff administrator</li>
         <li>You're in!</li>
     </ol>
     <h2>Creating instances</h2>
+    <ol>
+        <li>Head over to the "Compute" menu within the "Project" drop down on the right</li>
+        <li>Select "Instances" from the "Compute" menu</li>
+        <li>On the right, there should be an option to "Launch Instance"</li>
+        <br>
+        <img src="launch-instance.png" alt="Launch Instance button in the UI" width=1000>
+        <br>
+        <li>Within the "Details" tab of the launch menu, Enter a name for the instance. Include your first initial and last name, plus whatever you want for to be the name of the instance</li>
+        <p>EXAMPLE: <a style="font-family:'Lucida Console', monospace">TAlvord - SQL Test</a></p>
+        <li>Click "Next" or select the "Source" tab from the left panel.</li>
+        <li>Choose the image that you want to instantiate.</li>
+        <br>
+        <img src="source-options.png" alt="Image Options in the source tab">
+        <br>
+        <li>Select "NO" for <a style="font-family:'Lucida Console', monospace"></a></li>
+        <li>Click "Next" or select the "Flavor" tab</li>
+        <li>Assign a flavor based on the size (tiny is minimal and can really only run cirros; xsmal can run most lubuntu images; small is good for server options</li>
+        <img src="flavor-options.png" alt="Flavor options" frame="lightgray">
+        <li>Click "Next" or select the "Networks" tab from the left panel.</li>
+        <li>Select the "OIT-LEARNING" network</li>
+        <li>Click "Launch Instance"</li>
+    </ol>
+    <h2>Connecting to an instance</h2>
+    <ol>
+        <li></li>
+    </ol>
 </article>
 </html>

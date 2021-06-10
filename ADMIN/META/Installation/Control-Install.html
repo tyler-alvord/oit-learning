@@ -77,7 +77,7 @@ article{
                 <li><a style="font-family:'Lucida Console', monospace">sudo hostnamectl set-hostname oscontrol.lab.connection.ninja</a></li>
                 <li><a style="font-family:'Lucida Console', monospace">sudo snap --classic certbot</a></li>
                 <li><a style="font-family:'Lucida Console', monospace">sudo ln -s /snap/bin/certbot /usr/bin/certbot</a></li>
-                <li><a style="font-family:'Lucida Console', monospace">sudo certbot certonly --standalone --preferred-challenges dns </a>*</li> 
+                <li><a style="font-family:'Lucida Console', monospace">sudo certbot certonly --manual --preferred-challenges dns </a><a style="color:red">*</a></li> 
                 <li>Follow the steps and prompts that are provided by certbot to create the CA-Signed Certificate File. Try using the utility that they link for verifying the DNS check before moving forward.</li>
                 <li>Create an <a style="font-family:'Lucida Console', monospace">ldif</a> file that matches the <a style="font-family:'Lucida Console', monospace">certs.ldif</a> found in this directory.</li>
                 <li><a style="font-family:'Lucida Console', monospace">sudo setfacl -m user:openldap:r-x /etc/letsencrypt/live</a></li>
@@ -116,22 +116,23 @@ article{
         </ol>
         <li>Select the Ubuntu Server Minimal Desktop Install and allow it to install</li>
         <li>Restart the server</li>
-        <li>Aftere completion run the following commands to install Openstack Microstack *</li>
+        <li>Aftere completion run the following commands to install Openstack Microstack <a style="color:red">**</a></li>
         <ol>
             <li style="font-family:'Lucida Console', monospace">sudo su -</li>
             <li style="font-family:'Lucida Console', monospace">snap install microstack --devmode --beta</li>
         </ol>
         <li>After completion run the following commands:</li>
         <ol>
-            <li style="font-family:'Lucida Console', monospace">microstack init --auto --controller</li>
+            <li style="font-family:'Lucida Console', monospace">microstack init --auto --control</li>
             <li style="font-family:'Lucida Console', monospace">exit</li>
         </ol>
-        <li>Add the following repository to APT:</li>
+        <li>Add the following repository to APT by creating a file with the content below called <a style="font-family:'Lucida Console', monospace">webmin-repo.list</a> in the <a style="font-family:'Lucida Console', monospace">/etc/apt/sources.list.d/</a> directory</li>
         <ul><li style="font-family:'Lucida Console', monospace">deb https://webmin.com/download/repository sarge contrib</li></ul>
         <li>After completion run the following commands:</li>
         <ol>
-            <li style="font-family:'Lucida Console', monospace">sudo wget https://download.webmin.com/jcameron-key.asc</li>
             <li style="font-family:'Lucida Console', monospace">sudo apt-get install apt-transport-https</li>
+            <li style="font-family:'Lucida Console', monospace">sudo wget https://download.webmin.com/jcameron-key.asc</li>
+            <li style="font-family:'Lucida Console', monospace">sudo apt-key add jcameron-key.asc</li>
             <li style="font-family:'Lucida Console', monospace">sudo apt-get update</li>
             <li style="font-family:'Lucida Console', monospace">sudo apt-get install webmin</li>
             <li style="list-style: none;">These steps were pulled from the official Webmin steps for Debian install <a href="https://www.webmin.com/deb.html">here</a></li>
