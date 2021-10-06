@@ -60,6 +60,7 @@ article{
             <li style="font-family:'Lucida Console', monospace">sudo lvm lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv</li>
             <li style="font-family:'Lucida Console', monospace">sudo resize2fs /dev/ubuntu-vg/ubuntu-lv</li>
         </ul>
+        <!--
         <li>Setup the base Authentication System</li>
         <ol>
             <li>Install and configure the LDAP server:</li>
@@ -72,13 +73,16 @@ article{
                 <li>Enter <a style="font-family:'Lucida Console', monospace">0!tgr@d21</a> for the ldap password</li>
                 <li>Aggree to move the old configuration to prevent conflict.</li>
             </ol>
-            <li>Create a TLS Certificate and configure OpenLDAP to support it:</li>
+        -->
+        
+            <li>Create a TLS Certificate:</li>
             <ol>
-                <li><a style="font-family:'Lucida Console', monospace">sudo hostnamectl set-hostname oscontrol.lab.connection.ninja</a></li>
-                <li><a style="font-family:'Lucida Console', monospace">sudo snap --classic certbot</a></li>
+                <li><a style="font-family:'Lucida Console', monospace">sudo hostnamectl set-hostname mscontrol.lab.connection.ninja</a></li>
+                <li><a style="font-family:'Lucida Console', monospace">sudo snap install  --classic certbot</a></li>
                 <li><a style="font-family:'Lucida Console', monospace">sudo ln -s /snap/bin/certbot /usr/bin/certbot</a></li>
                 <li><a style="font-family:'Lucida Console', monospace">sudo certbot certonly --manual --preferred-challenges dns </a><a style="color:red">*</a></li> 
                 <li>Follow the steps and prompts that are provided by certbot to create the CA-Signed Certificate File. Try using the utility that they link for verifying the DNS check before moving forward.</li>
+                <!--
                 <li>Create an <a style="font-family:'Lucida Console', monospace">ldif</a> file that matches the <a style="font-family:'Lucida Console', monospace">certs.ldif</a> found in this directory.</li>
                 <li><a style="font-family:'Lucida Console', monospace">sudo setfacl -m user:openldap:r-x /etc/letsencrypt/live</a></li>
                 <li><a style="font-family:'Lucida Console', monospace">sudo setfacl -m user:openldap:r-x /etc/letsencrypt/archive</a></li>
@@ -95,7 +99,7 @@ article{
             <ol>
                 <li>Import or create a file to match the <a style="font-family:'Lucida Console', monospace">populate.ldif</a> file in this directory</li>
                 <li>Import the necessary LDAP groups and configurations</li>
-                <li style="list-style: none; font-family:'Lucida Console', monospace">sudo ldapadd -x -D cn=admin,dc=lab,dc=connection,dc=ninja -W -f ./populate.ldif</li>
+                <li style=".list-style: none; font-family:'Lucida Console', monospace">sudo ldapadd -x -D cn=admin,dc=lab,dc=connection,dc=ninja -W -f ./populate.ldif</li>
                 <li>Set the admin password using the <a style="font-family:'Lucida Console', monospace">ldappasswd</a> utility:</li>
                 <li style="list-style: none; font-family:'Lucida Console', monospace">sudo ldappasswd -x -D cn=admin,dc=lab,dc=connection,dc=ninja -W -S uid=oit,ou=Users,dc=lab,dc=connection,dc=ninja</li>
                 <li>Prepare the server with the SUDO schema</li>
@@ -107,7 +111,7 @@ article{
                 <li>Import or create a file that matches the <a style="font-family:'Lucida Console', monospace">sudoers.ldif</a> file in this directory</li>
                 <li>Import the Sudo-specific groups and configurations</li>
                 <li style="list-style: none; font-family:'Lucida Console', monospace">sudo ldapadd -x -D cn=admin,dc=lab,dc=connection,dc=ninja -W -f ./sudoers.ldif</li>
-            </ol>
+            </ol>-->
         </ol>
         <li>After initial installation, the following commands</li>
         <ol>
@@ -116,6 +120,29 @@ article{
         </ol>
         <li>Select the Ubuntu Server Minimal Desktop Install and allow it to install</li>
         <li>Restart the server</li>
+        <li>Install XRDP for remote desktop services</li>
+        <ol>
+            <li><a style="font-family:'Lucida Console', monospace">sudo apt-get install xrdp</li>
+            <li><a style="font-family:'Lucida Console', monospace">sudo vi /etc/xrdp/xrdp.ini</a></li>
+            <li>Add the directories for the ssl certificate that we created</li>
+            <ul>
+                <li>Certificate <a style="font-family:'Lucida Console', monospace">/etc/letsencrypt/live/mscontrol.lab.connection.ninja/cert.pem</a></li>
+                <li>Certificate key <a style="font-family:'Lucida Console', monospace">/etc/letsencrypt/live/mscontrol.lab.connection.ninja/privkey.pem</a></li>
+                <li>Certificate Parent Chain <a style="font-family:'Lucida Console', monospace">/etc/letsencrypt/live/mscontrol.lab.connection.ninja/fullchaim.pem</a></li>
+            </ul>
+            <li><a style="font-family:'Lucida Console', monospace">sudo ufw allow from 192.168.50.0/24 to any port 3389</a></li>
+            <li><a style="font-family:'Lucida Console', monospace">sudo vi /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla</a></li>
+            <ul>
+                <li style="list-style:none"><b>Add the following to the file and save it.</b></li>
+                <li><a style="font-family:'Lucida Console', monospace">[Allow Colord all Users]</a></li>
+                <li style="list-style:none; font-family:'Lucida Console', monospace">Identity=unix-user:*</li>
+                <li style="list-style:none; font-family:'Lucida Console', monospace">Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile</li>
+                <li style="list-style:none; font-family:'Lucida Console', monosapce">ResultAny=no</li>
+                <li style="list-style:none; font-family:'Lucida Console', monosapce">ResultInactive=no</li>
+                <li style="list-style:none; font-family:'Lucida Console', monospace">ResultActive=yes</li>
+            </ul>
+            <li><a style="font-family:'Lucida Console', monospace">sudo systemctl start xrdp</a></li>
+        </ol>
         <li>Aftere completion run the following commands to install Openstack Microstack <a style="color:red">**</a></li>
         <ol>
             <li style="font-family:'Lucida Console', monospace">sudo su -</li>
@@ -125,6 +152,11 @@ article{
         <ol>
             <li style="font-family:'Lucida Console', monospace">microstack init --auto --control</li>
             <li style="font-family:'Lucida Console', monospace">exit</li>
+        </ol>
+        <li>Allow the Microstac Network Bridge to have network access</li>
+        <ol>
+            <li style="font-family:'Lucida Console', monosapce">sudo iptables -t nat -A POSTROUTING -s 10.20.20.1/24 ! -d 10.20.20.1/24 -j MASQUERADE</li>
+            <li style="font-family:'Lucida Console', monospace">sudo sysctl net.ipv4.ip_forward=1</li>
         </ol>
         <li>Add the following repository to APT by creating a file with the content below called <a style="font-family:'Lucida Console', monospace">webmin-repo.list</a> in the <a style="font-family:'Lucida Console', monospace">/etc/apt/sources.list.d/</a> directory</li>
         <ul><li style="font-family:'Lucida Console', monospace">deb https://webmin.com/download/repository sarge contrib</li></ul>
