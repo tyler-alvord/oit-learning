@@ -1,4 +1,4 @@
-# Infection Monkey (IMON)
+# Using Infection Monkey (IMON)
 
 ---
 ## What is the Infection Monkey Image
@@ -29,15 +29,15 @@ Infection Monkey calls its host server "Monkey Island" - if you see this name co
 ---
 ## Standards
 ### OS Login 
-|           |            |
-|-----------|------------|
-| Username: | *oit*      |
-| Password: | *owl@dm!n* |  
+|               |          |
+|---------------|----------|
+| **Username:** | oit      |
+| **Password:** | owl@dm!n |  
 ### INFECTION MONKEY LOGIN
-|           |            |
-|-----------|------------|
-| Username: | *admin*    |
-| Password: | *owl@dm!n* |  
+|               |          |
+|---------------|----------|
+| **Username:** | admin    |
+| **Password:** | owl@dm!n |  
 
 ## Additional Resources
 [Infection Monkey Documentation](https://www.guardicore.com/infectionmonkey/docs/)

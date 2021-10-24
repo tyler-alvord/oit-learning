@@ -1,4 +1,3 @@
-## Header 
 # TEMPLATE - Document Title
 ```DELETE ALL CODE BLOCKS (ALL VALUES BETWEEN THE 3x TICMARKS `)```
 
@@ -54,10 +53,53 @@ Example (this would render if it weren't in the codeblock):
     The second row (the hyphens) will be used to determine the justification of the text in that column. Just the plain line is left-justified, the line with a colon on each side :-: is centered, and the line with the colon only on the right (-:) is right-justified. 
     It's important that the pipes that define the borders of the table line up or the formatting will not be applied (add spaces to line them up if the content is different lengths)
 7. Info, warning, and highlight - INformation invents can be marked with a '?>' to make them stand out. Got a warning for a user? '!>' should make a big red message for them to see. If it's just something to stand out in a crowded page, block quotes should help '>'
+8. If you don't want a header to show up in the sidebar, you can tell docsify to ignore it by adding the following comment after the header <!--{docsify-ignore}-->
 ```
 
 ## Additional Resources
 ```
 Stuff that is nifty to have, but not necessarily important to embed or paraphrase in the main body of the document
+
 [Quick Name for the Resource](https://lmgtfy.app/?q=docsify)
+
 [Another one](https://isitsnowinginpdx.com/)
+
+```
+
+<!--
+DOCUMENTATION STANDARDS - ADMIN REFERENCES ONLY
+
+Page titles, headers, and other basic structure
+    - Pages should have their title set as the first and only "h1" header 
+        - there should be only one header with a single hashmark in front of it
+    EXAMPLES:
+        Good: # title
+              ## content header
+        Bad:  # title
+              # content header
+
+Referencing other pages or sections by name:
+    - page references to web resources should be stated in quotation marks
+    EXAMPLE: For more information, check out the "Setup an Instance" page in the "Openstack Information" section of this manual
+    EXAMPLE: You can get a little more detail from the "Common Use Cases" Section in the "Getting Started" Section of the ATT&CK Website.
+
+Buttons, menu options, or other openstack UI references:
+    -Enclose as a code block 
+    EXAMPLE: After entering your information, click the `accept` button to save your progress
+
+Formatting Credentials 
+    - Credentials should be in a table format
+        - header values empty
+        - all values left-justified. 
+    - Left column should be used as the ID field for the information stored in the right column
+        - ID fields should be bolded (use doulbe-asterisks **)
+        - ID fields should end with a colon ":"
+    EXAMPLE: 
+        |               |                 |
+        |---------------|-----------------|
+        | **Username:** |   admin         |
+        | **Password:** | SuperSecret123! |
+    NOTE: If your username or password contains an asterisk, you will need to escape the character
+
+
+-->

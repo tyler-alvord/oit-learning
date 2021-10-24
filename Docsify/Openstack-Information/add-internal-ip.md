@@ -1,1 +1,2 @@
 # Add an internal IP address
+Openstack doesn't allow you to add an external IP addres directly to the host (as in, assigning an IP from the external network to a Network Interface Card on the guest). Instead, you can leverage 1:1 Network Address Translation to provide external access to the Guests within Openstack. This feature is called "Floating IP"

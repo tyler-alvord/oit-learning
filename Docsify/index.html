@@ -6,12 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- Default stylesheet - left in for testing <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
   <style>
     :root{
       --sidebar-nav-link-border-color--active  : #FFD350 ;
       --sidebar-toggle-icon-color : #FFD350 ;
       --sidebar-width : 25rem;
+      --sidebar-border-color  : #003767 ;
+      --sidebar-nav-link-color--active  : #FFFFFF ;
+
+      --cover-heading-font-weight : bold ;
     }
   </style>
 </head>
@@ -20,8 +25,9 @@
   <script>
     window.$docsify = {
       loadSidebar: true,
-      subMaxLevel: 2,
+      subMaxLevel: 3,
       loadNavbar: false,
+      coverpage: true,
       themeable: {
         responsiveTables: false
       },
@@ -31,6 +37,7 @@
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
 </body>

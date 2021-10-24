@@ -6,20 +6,9 @@ To add 'child pages' to any page (linked or unlinked) just add a tab before the 
  -->
 
 - [Home](/)
-- Image Information
-    - [Lubuntu](/Image-Information/user-base.md "Understanding the Base Image")
-    - [MariaDB](/Image-Information/user-dbms.md "Understanding the DBMS Image")
-    - [Infection Monkey](/Image-Information/user-imon.md "Underinstanding Infection Monkey")
-- Openstack Information
-    - [Getting Started](/Openstack-Information/getting-started.md "Get started with Openstack")
-    - Network Configuration
-    - [Learn Neutron Networking](/Openstack-Information/understanding-networking.md "Learn the ropes of Openstack's network provider")
-    - [Add Internal IP addresses](/Openstack-Information/add-internal-ip "Configure Internal IP Access")
-    - [Add External (Floating) IP addresses](/Openstack-Information/add-external-ip "Configure External IP Access")
-    - [Manage Routers](/Openstack-Information/manage-routers.md "Understand Routers in Openstack")
-    - Image and Instance Configuration
-    - [Set Up an Instance](/Openstack-Information/setup-an-instance.md "How to start your instance")
-    - 
+- [Image-Information](/Image-Information/user-base.md)
+- [Openstack-Information](/Openstack-Information/getting-started.md)
+
 
 <!--
 Another fun thing about this document is that it doesn't *have* to include all the pages that you've created. You can hide pages from users that don't know the URL slug by omitting them from this list

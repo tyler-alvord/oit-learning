@@ -1,7 +1,7 @@
 # Using the base Lubuntu Image
 
 ## What is the "Base Image"
-The base image is a default configuration of Lubuntu. It can be used when you just need a quick Linux box to spin up. The QCOW file can be used to create empty instances.
+The base image is a default configuration of Lubuntu (Ubuntu w/ LXQT, or lightweight Ubuntu). It can be used when you just need a quick Linux box to spin up. The QCOW file can be used to create empty instances.
 
 For more information about creating custom images, speak with a system administrator - you can find the contact details for the admins in the "contacts" page.
 
@@ -10,7 +10,7 @@ The base image can be used for whatever you need. It only exists for ease of acc
 
 ## Standards
 ### OS Login 
-|           |            |
-|-----------|------------|
-| Username: | *oit*      |
-| Password: | *owl@dm!n* |  
+|               |          |
+|---------------|----------|
+| **Username:** | oit      |
+| **Password:** | owl@dm!n |  
