@@ -16,10 +16,11 @@ Describe the usage that the user can expect when working with this image. Explai
 ---
 ## Standards
 ### OS Login 
-|           |            |
-|-----------|------------|
-| Username: | *oit*      |
-| Password: | *owl@dm!n* |  
+|               |          |
+|---------------|----------|
+| **Username:** | oit      |
+| **Password:** | owl@dm!n |  
+
 ```
 Include the assumptions that were made to configure the system. Things like script locations, usernames, passwords (if necessary), and other added components should be noted here.
 ```

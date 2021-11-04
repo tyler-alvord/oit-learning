@@ -6,5 +6,5 @@
     - [LDAP Server](/Image-Information/user-ldap.md "Understanding LDAP Configuration")
     - [Infection Monkey](/Image-Information/user-imon.md "Underinstanding Infection Monkey")
     - [Low Orbit Ion Canon](/Image-Information/user-loic.md "Understanding LOIC")
-
+    - [Cirros (Basic functionality tests)](/Image-Information/cirros.md "What is Cirros anyway?")
 - [Openstack Information](/Openstack-Information/getting-started.md)

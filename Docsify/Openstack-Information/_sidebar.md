@@ -2,12 +2,13 @@
 - [Image Information](/Image-Information/user-base.md)
 - Openstack Information
     - [Getting Started](/Openstack-Information/getting-started.md "Get started with Openstack")
+    - [Setup your router](/Openstack-Information/initial-network-setup.md "Build your router to enable host to host communications!")
+    - Image and Instance Configuration
+    - [Set Up an Instance](/Openstack-Information/setup-an-instance.md "How to start your instance")
+    - [Accessing your Instance(s)](/Openstack-Information/accessing-an-instance.md "Access your instances")
+    - [Other Instance Management](/Openstack-Information/other-instance-management.md "Other Management for Instances")
     - Network Configuration
     - [Learn Neutron Networking](/Openstack-Information/understanding-networking.md "Learn the ropes of Openstack's network provider")
     - [Add Internal IP addresses](/Openstack-Information/add-internal-ip "Configure Internal IP Access")
     - [Add External (Floating) IP addresses](/Openstack-Information/add-external-ip "Configure External IP Access")
     - [Manage Routers](/Openstack-Information/manage-routers.md "Understand Routers in Openstack")
-    - Image and Instance Configuration
-    - [Set Up an Instance](/Openstack-Information/setup-an-instance.md "How to start your instance")
-    - [Accessing your Instance(s)](/Openstack-Information/accessing-an-instance.md "Access your instances")
-    - [Other Instance Management](/Openstack-Information/other-instance-management.md "Other Management for Instances")

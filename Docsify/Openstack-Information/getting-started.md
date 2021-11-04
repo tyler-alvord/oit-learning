@@ -25,6 +25,15 @@ Think of projects as sandboxes for ***instances*** to occupy.
 
 Any changes that are made within an ***instance*** built off a given  ***image*** will not persist after the ***instance*** is destroyed. 
 
+### Flavors
+A ***flavor*** is a pre-designated resource allocation for a given instance. If the Image is the content, think of the flavor as the package you put the image into to create an instance. There are four types of ***flavors*** - see below
+
+| Flavor | Description |
+|-|-|
+| m1.tiny | An extra small flavor - almost only usable by Cirros | 
+| 1/3 | A minimally provisioned flavor (1 CPU Core, 1GB RAM) that can run most of the images. Generally the smallest that a lubuntu-based instance should be provisioned with. You can have up to three of these flavors provisioned |
+| m1.small | A slightly better provisioned flavor that takes up two thirds of the available capacity for a standard project. Can be run alongside one **1/3** instance |
+| 3/3 | Use all of the default resources allocated to your project. | 
 ---
 ### Important services in Openstack
 Openstack has many different independently running services that make up its overall functionality. Below are a few of the services that will be useful to know.
