@@ -16,6 +16,10 @@
     * Select the [flavor](/Openstack-Information/getting-started?id=flavors) that you want to allocate for your instance
 6. Click the `networks` tab
     * Add an internal network to yoiur instance
+* To change the default security group
+    1. Click on the `Security Groups` tab
+    2. Remove the "Default" security group (permissions adhere to Principles of Least Privilege - explicit denies will override everything and explicit allows will override implicit deny)
 7. Click `lanch instance` button
+8. Done! You can now [access your instance](/Openstack-Information/accessing-an-instance.md)
 
 <!--Maybe add the option to change security groups?-->

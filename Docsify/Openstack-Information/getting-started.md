@@ -5,7 +5,7 @@ Openstack has a ton of overlap with common cloud provider services like Google C
 The expectation for this document is ***not*** for you to read it start to finish, but rather use the sidebar to navigate to quick answers to your questions as they come up. 
 
 ## Definitions and Explanations
-### Projects
+### Projects {docsify-ignore}
 Openstack leverages the concept of "projects" to keep instances separate from one another. A project is a bucket for resources that has its own independent networks, policies, images, instances, credentials, and resource allocations. 
 
 Projects can be associated with invidual user accounts or groups of user accounts. In the traditional deployment of Openstack, this is to allow you to build Applications and services into their own independent infrastructure. This greatly improves security, and scalability, and organization - since administrators can independently associate permissions with users per project, and users of a project don't have to worry about another app or computer affecting the functionality of their project. 
@@ -17,15 +17,15 @@ By default, students are assigned their own project with its own allocation of c
 Think of projects as sandboxes for ***instances*** to occupy. 
 
 
-### Instances
+### Instances {docsify-ignore}
 ***Instances*** are Virtual Machines within the Openstack environment. They are standalone computers with their own OS, allocated resources, and access. Thing of these as you would any other virtual machine from any other provider (VirtualBox, Hyper-V, etc). ***Instances*** are built off of ***images***. 
 
-### Images
+### Images {docsify-ignore}
 ***Images*** are a point-in-time configuration of a system. Images are static and will not change after they are added to the Openstack system. Traditionally, this is to enable rapid provisioning of computers with a common configuration for scalability. In this implementation, it's leveraged to give users a known-good configuration to rapidly get in and use preconfigured desktop environments. Each of the pre-created images are documented in the ["Image Information" section](/Image-Information/user-base.md) of this manual.
 
 Any changes that are made within an ***instance*** built off a given  ***image*** will not persist after the ***instance*** is destroyed. 
 
-### Flavors
+### Flavors {docsify-ignore}
 A ***flavor*** is a pre-designated resource allocation for a given instance. If the Image is the content, think of the flavor as the package you put the image into to create an instance. There are four types of ***flavors*** - see below
 
 | Flavor | Description |
@@ -35,7 +35,7 @@ A ***flavor*** is a pre-designated resource allocation for a given instance. If 
 | m1.small | A slightly better provisioned flavor that takes up two thirds of the available capacity for a standard project. Can be run alongside one **1/3** instance |
 | 3/3 | Use all of the default resources allocated to your project. | 
 ---
-### Important services in Openstack
+### Important services in Openstack {docsify-ignore}
 Openstack has many different independently running services that make up its overall functionality. Below are a few of the services that will be useful to know.
 
 For more information about this, check out the ["Openstack Components"](https://www.openstack.org/software/project-navigator/openstack-components#openstack-services) page on the Openstack website. 

@@ -20,5 +20,5 @@ Done! Your instance should now be accessible through the Floating IP address tha
 
 ?>Not Connecting? Make sure your Security Group Permissions allow for this! More information available in the ["Security Groups" section of "Learn Neutron Networking"](/Openstack-Information/understanding-networking.md?id=security-groups)
 
-## Add a floating IP from the "Floating IP" menu <!-- {docsify ignore} -->
+## Add a floating IP from the "Floating IP" menu {docsify-ignore}
 It is also possible to create an allocate floating IP addresses from the "Floating IPs" menu in the network configuration of your project. This way is fine as well, but for the purposes of simplicity, this document will focus on the options within the instances menu only.
