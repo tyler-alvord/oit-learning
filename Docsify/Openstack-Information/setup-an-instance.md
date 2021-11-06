@@ -2,7 +2,7 @@
 <!--Maybe record a video for this one?-->
 ?> Before you create your first instance, make sure that you have created the first router for your project - see the ["Initial Network Setup Guide"](/Openstack-Image/initial-network-setup.md) for details.
 
-## Creating an Instance
+## Creating an Instance  {docsify-ignore}
 ![](../img/launch-instance.png)
 1. Select the `Instances` menu under the `Compute` drop down within the `Project` header on the right side menu
 2. Click  `Launch Instance` in the top right corner 
@@ -15,7 +15,7 @@
 5. Click the `flavor` tab
     * Select the [flavor](/Openstack-Information/getting-started?id=flavors) that you want to allocate for your instance
 6. Click the `networks` tab
-    * Add an internal network to yoiur instance
+    * Add an internal network to your instance
 * To change the default security group
     1. Click on the `Security Groups` tab
     2. Remove the "Default" security group (permissions adhere to Principles of Least Privilege - explicit denies will override everything and explicit allows will override implicit deny)

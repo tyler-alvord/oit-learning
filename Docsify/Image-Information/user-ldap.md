@@ -1,10 +1,10 @@
 # Using Lightweight Directory Access Protocol Server (LDAP)
 
----
 ## What is the LDAP Image
-The LDAP image is a pre-configured LDAP Server, complete with users, groups, and organizational units. The LDAP server is running LDAP-Utils, Slapd (OpenLDAP), and PHP LDAP admin for web-based administration. 
+|||
+|-|-|
+| ![](../img/openldap-logo.png ':no-zoom') | The LDAP image is a pre-configured LDAP Server, complete with users, groups, and organizational units. The LDAP server is running LDAP-Utils, Slapd (OpenLDAP), and PHP LDAP admin for web-based administration. |
 
----
 ## How to use the LDAP Image
 The LDAP server can be used however you want, but it was built with the following goals:
 * To be used as an LDAP endpoint for external applications
@@ -14,7 +14,7 @@ The LDAP server can be used however you want, but it was built with the followin
 * To gain an understanding of LDAP standards and configurations
     * EXAMPLE: creating and managing users, groups, and organizational units
     * EXAMPLE: configuring LDAP endpoint and server settings
-    
+
 ### Accessing the PHP LDAP Admin Webpage
 1. Navigate to  http://{server-ip}/phpldapadmin 
 2. Sign in using the admin credentials below (in the "Standards" section, under the "LDAP Web Admin login")
@@ -67,7 +67,8 @@ EXAMPLE: The user Bob Johnson would have the following login:
 All users are created with the first-initial followed by last name for their username and password. This should allow you to log into any of the user accounts that you want should you use this endpoint as an authentication source. 
 
 The following URI's are added to the server to listen on:
-||
+
+| |
 |-|
 | ldap://ldap.lab.pdx.oit.edu |
 | ldap://localhost |

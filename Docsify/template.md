@@ -6,7 +6,10 @@
 ```
 Go into the detail of what the system does and how 
 ```
-
+|||
+|-|-|
+| ![](../img/logo-image.png ':no-zoom') | ``` Insert first paragraph of content here ``` |
+<!--If the paragraph is too long or if the image is too large and the resulting table has content with a disproportionate space taken up by one or the other, you can remove the table and display the image above the text - see the Infection monkey page for an example. -->
 ---
 ## How to use the _____ Image
 ```

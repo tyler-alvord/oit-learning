@@ -1,7 +1,7 @@
 # Add an external IP address
 Openstack doesn't allow you to add an external IP addres directly to the host (as in, assigning an IP from the external network to a Network Interface Card on the guest). Instead, you can leverage 1:1 Network Address Translation to provide inbound external access to the Guests within Openstack. This feature is called "Floating IP"
 
-**Floating IP addresses are not required to give your instance *outbound* access to the internet** - that can be done with standard internal network addresses (see ["Learn Neutron Networking"](/Openstack-Information/understanding-networking.md) for more detail about this). Floating IP addresses are only required if you want to communicate to the instance from the external network - for example, from another app on your computer.
+**Floating IP addresses are not required to give your instance *outbound* access to the internet** - that can be done with standard internal network addresses (see ["Learn Neutron Networking"](/Openstack-Information/understanding-networking.md) for more detail about internal vs Floating IP addresses). Floating IP addresses are only required if you want to communicate to the instance from the external network - for example, from another app on your computer.
 
 ## Add a floating IP From the Intances Menu
 > This will need an instance to associate the address with. If you don't have an instance yet, follow the steps to [create an instance](/Openstack-Information/setup-an-instance.md)!

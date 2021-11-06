@@ -1,10 +1,10 @@
 # Using the SAMBA File Server
 
----
 ## What is the SMB Server Image
-As the name might entail, the SMB Server image is a server running Samba 4.11 to share files and printers on the network (particularly with Windows devices). This server is configured to allow you to experiencing modifying SAMBA shares, working with Linux-native file sharing formats, and configuring printing in a linux environment. This image - alongside the LDAP image - should allow you to create an environment of multiple linux devices that align with what you may see in a small nettwork with a Linux server. 
+|||
+|-|-|
+| ![](../img/samba-logo.png ':no-zoom') | The SMB Server image is a server running Samba 4.11 to share files and printers on the network (particularly with Windows devices). This server is configured to allow you to experiencing modifying SAMBA shares, working with Linux-native file sharing formats, and configuring printing in a linux environment. This image - alongside the LDAP image - should allow you to create an environment of multiple linux devices that align with what you may see in a small nettwork with a Linux server. |
 
----
 ## How to use the SMB Server Image
 ### Create or Modify a Samba share 
 1. Open the Samba configuration file "/etc/samba/smb.conf" using your text editor of choice
@@ -65,11 +65,10 @@ You may find better luck connecting to these instances by using the `net use` co
 
 1. Open a PowerShell or Command Prompt on your machine
 2. Type the following command:
-    * `net use \\{floating-ip}\{sharename} /user:{username}`
+    * `net use {DriveLetter}: \\{floating-ip}\{sharename} /user:{username}`
 3. Enter the password for the samba user
 4. Access your files!
 
----
 ## Standards
 ### OS Login 
 |               |          |
