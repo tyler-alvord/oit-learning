@@ -1,9 +1,0 @@
-Additional Resources:
-https://www.sudo.ws/man/1.9.7/sudoers.ldap.man.html
-https://manpages.ubuntu.com/manpages/bionic/man5/sssd-sudo.5.html
-https://linux.die.net/man/5/sssd-ldap
-https://sssd.io/troubleshooting/sudo.html
-https://manpages.ubuntu.com/manpages/bionic/man1/ldap-schema-manager.1.html
-https://kifarunix.com/how-to-configure-sudo-via-openldap-server/
-https://ubuntu.com/server/docs/service-sssd
-https://askubuntu.com/questions/1106795/ubuntu-server-18-04-lvm-out-of-space-with-improper-default-partitioning
