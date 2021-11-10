@@ -22,4 +22,6 @@
 7. Click `lanch instance` button
 8. Done! You can now [access your instance](/Openstack-Information/accessing-an-instance.md)
 
+?> Once you have started your new instances, it's generally recommended that you run through some basic OS updates to make sure that you're on the latest versions of all included components. 
+
 <!--Maybe add the option to change security groups?-->
