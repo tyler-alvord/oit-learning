@@ -12,5 +12,5 @@
     - [Add Internal IP addresses](/Openstack-Information/add-internal-ip "Configure Internal IP Access")
     - [Add External (Floating) IP addresses](/Openstack-Information/add-external-ip "Configure External IP Access")
     - Misc
-    - [Student Rules of Engagement](/Openstack-Informatioin/rules-of-engagement.md "Read the Rules of Engagement")
+    - [Student Rules of Engagement](/Openstack-Information/rules-of-engagement.md "Read the Rules of Engagement")
 <!--    - [Manage Routers](/Openstack-Information/manage-routers.md "Understand Routers in Openstack")-->
