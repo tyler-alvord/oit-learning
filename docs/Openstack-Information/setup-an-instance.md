@@ -24,4 +24,7 @@
 
 ?> Once you have started your new instances, it's generally recommended that you run through some basic OS updates to make sure that you're on the latest versions of all included components. 
 
+?> Do not leave instances on or active for longer than they need to be - if you are done using an instance, or if the instance doesn't contain any configurations that you cannot replicate easily, please delete or remove the instance when you are no longer actively using it. 
+
+!> If you leave an instance unattended for two weeks or longer, your instance may be subject to termination. If a project requires that you maintain your instance(s) for longer than two weeks, you can just make a change to the instance (restart, shut down, backup, etc) and the timer will restart. If you need your instance to stay online, talk with a student administrator.
 <!--Maybe add the option to change security groups?-->
