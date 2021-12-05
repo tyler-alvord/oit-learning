@@ -3,22 +3,6 @@ This part may seem like putting the cart before the horse, but it's a quick and 
 
 ![](../img/net-setup-network-topology.png)
 
-## Setting up the router
-### Create the router
-1. Click the `Network` drop down
-2. Select the `Routers` option
-3. Click `create router` 
-4. Add a name for the router
-5. Select the `external` network in the external network drop down
-6. Click `Create Router`
-
-### Add the interface for the internal network
-1. Click on the router object you just created
-2. Select the `interfaces` tab 
-3. Click `Add interface`
-4. Select the `internal subnet` from the internal network
-5. Click `submit`
-
 ## Setting up Security Groups
 1. Modify the Default Security Group
     1. Click on the `Security Groups` tab under the `network` drop down

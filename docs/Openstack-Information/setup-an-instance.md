@@ -1,6 +1,6 @@
 # Setup an instance in Openstack
 <!--Maybe record a video for this one?-->
-?> Before you create your first instance, make sure that you have created the first router for your project - see the ["Initial Network Setup Guide"](/Openstack-Image/initial-network-setup.md) for details.
+?> Before you create your first instance, make sure that you have adjust - see the ["Initial Network Setup Guide"](/Openstack-Image/initial-network-setup.md) for details.
 
 ## Creating an Instance  {docsify-ignore}
 ![](../img/launch-instance.png)
