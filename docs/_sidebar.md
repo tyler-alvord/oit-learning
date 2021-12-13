@@ -6,8 +6,8 @@ To add 'child pages' to any page (linked or unlinked) just add a tab before the 
  -->
 
 - [Home](/)
-- [Image-Information](/Image-Information/user-base.md)
-- [Openstack-Information](/Openstack-Information/getting-started.md)
+- [Image Information](/Image-Information/user-base.md)
+- [Openstack Information](/Openstack-Information/getting-started.md)
 
 
 <!--

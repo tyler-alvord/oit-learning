@@ -61,7 +61,7 @@
 ### Connecting your Windows Machine to the share
 You may find better luck connecting to these instances by using the `net use` command, instead of leveraging the File Explorer's UI to connect. After you've added the share, you should be able to access the files and folders from the File Explorer. 
 
-?> Ensure that you have assigned a floating IP for this instance and that the Security Groups permit inbound access! For more information, check out the [add external IP page](../Openstack-Information/add-external-ip.md)
+?> Ensure that you have assigned a floating IP for this instance and that the Security Groups permit inbound access! For more information, check out the [add external IP page](/Openstack-Information/add-external-ip.md)
 
 1. Open a PowerShell or Command Prompt on your machine
 2. Type the following command:
