@@ -22,7 +22,9 @@ The LDAP server can be used however you want, but it was built with the followin
 
 ### Creating a User
 1. Select the OU under the parent "Users" OU that you want to add the user to (see user info below for more information about directory structure)
+
 ?> It is important to select the organizational unit. You *can* create a child object within a CN object, but it is not recommended
+
 2. Click `Create Child Entry`
 3. Select `Generic:User Account` 
 4. Enter whatever information that you want to use for the user. 

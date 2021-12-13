@@ -3,7 +3,7 @@
 ## What is the SMB Server Image
 |||
 |-|-|
-| ![](../img/samba-logo.png ':no-zoom') | The SMB Server image is a server running Samba 4.11 to share files and printers on the network (particularly with Windows devices). This server is configured to allow you to experiencing modifying SAMBA shares, working with Linux-native file sharing formats, and configuring printing in a linux environment. This image - alongside the LDAP image - should allow you to create an environment of multiple linux devices that align with what you may see in a small nettwork with a Linux server. |
+| ![](../img/samba-logo.png ':no-zoom') | The SMB Server image is a server running Samba 4.11 to share files and printers on the network (particularly with Windows devices). This server is configured to allow you to experiencing modifying SAMBA shares, working with Linux-native file sharing formats, and configuring printing in a linux environment. This image - alongside the LDAP image - should allow you to create an environment of multiple Linux devices that align with what you may see in a small network with some basic Linux servers. |
 
 ## How to use the SMB Server Image
 ### Create or Modify a Samba share 
