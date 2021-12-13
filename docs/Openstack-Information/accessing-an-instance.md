@@ -1,7 +1,7 @@
 # Access your Openstack Instances
 Instances can be accessed from your computer in a few ways! In this section, you can read about some of the standards that we can use to do so. 
 
-As a first action, you should make sure that you have an instance setup and ready to be accessed (at least connected to the [internal network](/Openstack-Information/add-internal-ip.md)). If you have not done this, check out the ["Setup and Instance"](/Openstack-Information/setup-an-instance.md) page for more information on getting setup. 
+As a first action, you should make sure that you have an instance setup and ready to be accessed (at least connected to the [internal network](/Openstack-Information/add-internal-ip.md)). If you have not done this, check out the ["Setup an Instance"](/Openstack-Information/setup-an-instance.md) page for more information on getting setup. 
 
 ## Accessing instances through the web browser
 Openstack has native support for a console environment (with a GUI if it's installed on the image) from the Horizon web interface. This will likely suffice for any needs that you might have when working with the instances that you create. 
