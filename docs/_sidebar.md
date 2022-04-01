@@ -8,7 +8,7 @@ To add 'child pages' to any page (linked or unlinked) just add a tab before the 
 - [Home](/)
 - [Image Information](/Image-Information/user-base.md)
 - [Openstack Information](/Openstack-Information/getting-started.md)
-
+- [More Help](/help.md)
 
 <!--
 Another fun thing about this document is that it doesn't *have* to include all the pages that you've created. You can hide pages from users that don't know the URL slug by omitting them from this list
