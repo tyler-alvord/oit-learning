@@ -8,3 +8,4 @@
     - [Low Orbit Ion Canon](/Image-Information/user-loic.md "Understanding LOIC")
     - [Cirros (Basic functionality tests only)](/Image-Information/cirros.md "What is Cirros anyway?")
 - [Openstack Information](/Openstack-Information/getting-started.md)
+- [More Help](/help.md)
