@@ -1,7 +1,7 @@
 # Helpful contacts
 ## Account Creation Contact:
 | Name | Email | Administrator Type | Other Contacts |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | Tyler Alvord | tyler.alvord@oit.edu | Student Admin / Creator of system | https://github.com/tyler-alvord <br> https://discordapp.com/users/teearay#1523 |
 | Dan Carrere | dan.carrere@oit.edu | Staff Admin | --- |
 
