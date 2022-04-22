@@ -1,9 +1,9 @@
 # Using Infection Monkey (IMON)
 
 ## What is the Infection Monkey Image
-![](../img/infectionmonkey-logo.jpg ':no-zoom') 
-
-Infection Monkey is a breach and attack simlutor. You can use it to target computers in your network, see how far a credential can go through your network (validate scoping and permissions). It will find vulnerable services, map how it was able to access computers that it was able to gain access to - even validate whether your network is zero-trust ready. When it's all done, it will provide results in a visual format withy insight into how to fix and mitigate the risks of the environment. |
+|||
+|-|-|
+| ![](../img/infectionmonkey-logo.jpg ':no-zoom') | Infection Monkey is a breach and attack simlutor. You can use it to target computers in your network, see how far a credential can go through your network (validate scoping and permissions). It will find vulnerable services, map how it was able to access computers that it was able to gain access to - even validate whether your network is zero-trust ready. When it's all done, it will provide results in a visual format withy insight into how to fix and mitigate the risks of the environment. |
 
 This would be useful for validating your own configurations and applications that you're developing, or just to test what an attack looks like with a known-insecure configuration. This image will attempt to "infect" hosts with an inert reporting component (a "monkey") that attempts to spread itself from the image host throughout the network that you point it to. 
 
