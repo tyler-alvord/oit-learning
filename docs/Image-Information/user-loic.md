@@ -1,6 +1,6 @@
 # (Responsibly) Using Low Orbit Ion Cannon (LOIC)
 
-!> Low Orbit Ion Cannon is ***NOT*** a toy. This tool must be handled with care to avoid incidents. If you are unsure if your test is within the reasonable use of this system, consult an administrator for input. To reiterate, you **must read the student Rules of Engagement** to understand the appropriate use of the tools contained within this image. Targeting any machine without expressed consent from the owner of that machine is a violation of Federal Law.
+!> Low Orbit Ion Cannon is ***NOT*** a toy. This tool must be handled with care to avoid incidents. If you are unsure if your test is within the reasonable use of this system, consult an administrator for input. To reiterate, you **must read the [OIT Student Rules of Engagement](/Openstack-Information/rules-of-engagement.md)** to understand the appropriate use of the tools contained within this image. Targeting any machine without expressed consent from the owner of that machine is a violation of Federal Law.
 
 ## What is the LOIC Image
 Low Orbit Ion Cannon or LOIC is a Denial of Service utility notably used by Anonymous in a cyber attack - its source code was released to public domain. It will flood a targetted machine with web requests over TCP, UDP, or HTTP. You can customize the target, the protocol, the speed of the requests, the timeout for the requests, and the message that you are sending in the requests. Because it is a brute-force communication service, it is highly traceable and should be easy to guard against or mitigate.
