@@ -8,11 +8,11 @@ The expectation for this document is ***not*** for you to read it start to finis
 ### Projects {docsify-ignore}
 Openstack leverages the concept of "projects" to keep instances separate from one another. A project is a bucket for resources that has its own independent networks, policies, images, instances, credentials, and resource allocations. 
 
-Projects can be associated with invidual user accounts or groups of user accounts. In the traditional deployment of Openstack, this is to allow you to build Applications and services into their own independent infrastructure. This greatly improves security, and scalability, and organization - since administrators can independently associate permissions with users per project, and users of a project don't have to worry about another app or computer affecting the functionality of their project. 
+Projects can be associated with invidual user accounts or groups of user accounts. In the traditional deployment of Openstack, this is to allow you to build Applications and services into their own independent infrastructure. This greatly improves security, and scalability. Projects also help with organization - since administrators can independently associate permissions with users per project, and users of a project don't have to worry about another app or computer affecting the functionality of their own. 
 
-In this implementation, Projects are used to create a private environment for student testing. Programmatic integration with the platform is still available for users, but it is not the primary objective of the system, unlike the objectives of many of the production deployments of Openstack. 
+In this implementation, Projects are used to create a private environment for student testing. Programmatic integration with the platform is still available for users, but it is not the primary objective of the system. 
 
-By default, students are assigned their own project with its own allocation of compute resources. If a student needs to access resources for a project that are greater than the default allocation, administrators can provide a temporary project with high allocations. Similarly, if a student needs to other students access to their project (to manage and create instances collaboratively), administrators can create a temporary project and provide access to all required student accounts. 
+By default, students are assigned their own project with its own allocation of compute resources. If a student needs to access resources for a project that are greater than the default allocation, administrators can provide a temporary project with high allocations. Similarly, if a student needs to allow other students access to a common project (to manage and create instances collaboratively), administrators can create a temporary project and provide access to all required student accounts. 
 
 Think of projects as sandboxes for ***instances*** to occupy. 
 
