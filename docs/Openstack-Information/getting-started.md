@@ -63,4 +63,4 @@ For more information about this, check out the ["Openstack Components"](https://
 | Total Storage | 10 GB |
 
 ## Additional Resources
-[Openstack Wallaby Documentation (Current version of 10/2021)](https://docs.openstack.org/wallaby/index.html)
+[Openstack Xena Documentation (Current version of 10/2021)](https://docs.openstack.org/xena/index.html)
