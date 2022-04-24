@@ -31,9 +31,10 @@ A ***flavor*** is a pre-designated resource allocation for a given instance. If 
 | Flavor | Description |
 |-|-|
 | m1.tiny | An extra small flavor - almost only usable by Cirros | 
-| 1/3 | A minimally provisioned flavor (1 CPU Core, 1GB RAM) that can run most of the images. Generally the smallest that a lubuntu-based instance should be provisioned with. You can have up to three of these flavors provisioned |
-| m1.small | A slightly better provisioned flavor that takes up two thirds of the available capacity for a standard project. Can be run alongside one **1/3** instance |
-| 3/3 | Use all of the default resources allocated to your project. | 
+| minimal | The minimum amount of resources that you should commit to Lubuntu (1 CPU, 1GB RAM) |
+| 1/3 | A minimally provisioned flavor (2 CPU Core, 2GB RAM) that can run most of the images. A bit larger than the smallest that a lubuntu-based instance should be provisioned with. You can have up to three of these flavors provisioned |
+| 2/3 | A slightly better provisioned flavor that takes up two thirds of the available capacity (4 CPU Core, 4GB RAM) for a standard project. Can be run alongside one **1/3** instance |
+| 3/3 | Use all of the default resources allocated to your project. (6 CPU Core 6 GB RAM) | 
 ---
 ### Important services in Openstack {docsify-ignore}
 Openstack has many different independently running services that make up its overall functionality. Below are a few of the services that will be useful to know.
@@ -57,7 +58,8 @@ For more information about this, check out the ["Openstack Components"](https://
 |||
 |-|-|
 | Instances | 3 |
-| RAM | 3072 |
+| CPU | 6 |
+| RAM | 6144 |
 | Volumes | 10 |
 | Snapshots | 10 |
 | Total Storage | 10 GB |
